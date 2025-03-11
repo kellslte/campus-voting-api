@@ -1,0 +1,5 @@
+{
+    "exec": "node src/main.js",
+    "watch": ["src"],
+    "ignore": ["node_modules"]
+}
