@@ -36,10 +36,8 @@ export const signIn = asyncWrapper(async (req, res) => {
       "The request failed witht the following errors",
       errors
     );
-
-  const identifier = value.email ? value.email : value.student_id;
-
-  const token = await authService.authenticateUser(identifier, value.password);
+  
+  const token = await authService.authenticateUser(value.identifier, value.password);
 
   res.cookie("token", token, {
     expires: new Date(
@@ -66,5 +64,16 @@ export const getAuthenticatedUser = asyncWrapper(async (req, res) => {
     success: true,
     message: "User retrieved successfully",
     data: { user },
+  });
+});
+
+
+// Log a user out
+export const logout = asyncWrapper(async (req, res) => {
+  res.clearCookie("token");
+
+  res.status(200).json({
+    success: true,
+    message: "User logged out successfully",
   });
 });

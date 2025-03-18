@@ -29,7 +29,7 @@ const Profile = sequelize.define("Profile", {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  middlename: {
+  middleName: {
     type: DataTypes.STRING,
     allowNull: false,
   },

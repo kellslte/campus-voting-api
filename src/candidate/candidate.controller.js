@@ -4,7 +4,8 @@ import * as candidateService from "./candidate.service.js";
 import { CreatCanditateRequest } from "./candidate.request.js";
 import validator from "../common/providers/validator.provider.js";
 
-export const registerCandidate = asyncWrapper(async (req, res) => {
+export const registerCandidate = asyncWrapper( async ( req, res ) =>
+{
   const { errors, value } = validator.validate(CreatCanditateRequest, req.body);
 
   if (errors)

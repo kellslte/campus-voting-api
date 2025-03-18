@@ -1,5 +1,6 @@
 import { Router } from "express";
 import authRouter from "./auth.router.js";
+import candidateRouter from "./candidate.router.js";
 const router = Router();
 
 // Health Status Route
@@ -13,6 +14,7 @@ router.get( "/health", ( req, res ) =>
 
 // Other Route Definitions
 router.use( '/auth', authRouter );
+router.use("/candidates", candidateRouter);
 
 
 //  Not Found Route

@@ -41,5 +41,6 @@ export async function createUserAccount(userData) {
     id: newUser.id,
     email: newUser.email,
     student_id: newUser.student_id,
+    role: newUser.role.name,
   };
 }

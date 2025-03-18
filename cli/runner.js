@@ -1,9 +1,13 @@
-import { seedRolesTable } from "../src/lib/utils.js";
+import { seedAdminsTable, seedRolesTable } from "../src/lib/utils.js";
 
 (() => {
   switch (process.argv[2]) {
-    case "seed":
+    case "seed:roles":
       seedRolesTable();
+      break;
+    
+    case "seed:admins":
+      seedAdminsTable();
       break;
 
     default:

@@ -10,7 +10,8 @@
     "test": "mocha",
     "start:dev": "nodemon",
     "start:prod": "node src/main.js",
-    "seed:roles": "node cli/runner.js seed"
+    "seed:roles": "node cli/runner.js seed:roles",
+    "seed:admins": "node cli/runner.js seed:admins"
   },
   "keywords": [],
   "author": "",
